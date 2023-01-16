@@ -25,22 +25,14 @@ $character"""
 show_always = false
 format = '[$user](bold yellow) in '
 
-[golang]
-symbol = "go "
-format = 'via [$symbol]($style)'
-
-[nodejs]
-symbol = "nodejs "
-format = 'via [$symbol]($style)'
-
 [python]
 symbol = "py "
 format = 'via [$symbol]($style)'
 
-[character]
-success_symbol = "[>](bold green)"
-error_symbol = "[x](bold red)"
-vimcmd_symbol = "[<](bold green)"
+# [character]
+# success_symbol = "[>](bold green)"
+# error_symbol = "[x](bold red)"
+# vimcmd_symbol = "[<](bold green)"
 
 [git_commit]
 tag_symbol = " tag "
