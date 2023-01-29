@@ -1,25 +1,12 @@
 format = """
-$username\
-$hostname\
-$shell\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$memory_usage\
-$env_var\
-$custom\
-$sudo\
-$cmd_duration\
-$jobs\
-$battery\
-$time\
-$status\
-$os\
-$container\
-$character"""
+$character\
+"""
 
 [username]
 show_always = false
