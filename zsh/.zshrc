@@ -20,6 +20,6 @@ alias normr="norminette -R CheckForbiddenSourceHeader"
 # source "$ZDOTDIR"/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # eval "$(starship init zsh)"
 
-# source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PS1="arthur: %1~ %# "
