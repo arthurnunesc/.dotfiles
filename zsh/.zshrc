@@ -17,6 +17,12 @@ compinit
 alias ccw="gcc -Wall -Wextra -Werror"
 alias normr="norminette -R CheckForbiddenSourceHeader"
 
+# My aliases
+alias ls="ls --color=auto"
+alias nvim="nvim.appimage"
+alias vim="nvim.appimage"
+alias vi="nvim.appimage"
+
 # Prompt
 PS1="arthur: %1~ %# "
 
