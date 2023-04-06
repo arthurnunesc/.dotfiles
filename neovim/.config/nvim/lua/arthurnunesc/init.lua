@@ -1,2 +1,2 @@
 require("arthurnunesc.remap")
-print("hello from tuzin")
+require("arthurnunesc.packer")

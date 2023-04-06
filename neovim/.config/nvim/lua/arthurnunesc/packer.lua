@@ -6,21 +6,32 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
+
+  -- Custom LSP support
+  use { 'neovim/nvim-lspconfig' }
+
+  -- Theming
+  use { "hachy/eva01.vim" , branch = "main", as = "eva01" }
   
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  -- GitHub Copilot
+  use { 'github/copilot.vim' }
 
   use {
-	  'catppuccin/nvim', as = 'catppuccin',
-	  'rose-pine/neovim', as = 'rose-pine'
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = {'nvim-lua/plenary.nvim'}
   }
-   
   use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} }
-  use { 'nvim-treesitter/playground' }
-
+  use { 'nvim-treesitter/playground', {run = ':TSInstall query'} }
   use { 'ThePrimeagen/harpoon' }
-
+  
+  -- 42 stuff
+  use { 'https://github.com/arthurnunesc/42header-vim.git' }
+  use {
+    'https://github.com/arthurnunesc/42norminette-vim.git',
+    requires = {'vim-syntastic/syntastic'} 
+  }
+ 
+  -- Python stuff
+  vim.cmd[[let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python']]  
+  use { 'psf/black' }
 end) 

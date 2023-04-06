@@ -74,20 +74,40 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["42header-vim.git"] = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/42header-vim.git",
+    url = "https://github.com/arthurnunesc/42header-vim"
+  },
+  ["42norminette-vim.git"] = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/42norminette-vim.git",
+    url = "https://github.com/arthurnunesc/42norminette-vim"
+  },
+  black = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/black",
+    url = "https://github.com/psf/black"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
+  eva01 = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/eva01",
+    url = "https://github.com/hachy/eva01.vim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  neovim = {
+  ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
-  },
-  nvim = {
-    loaded = true,
-    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -108,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  syntastic = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/syntastic",
+    url = "https://github.com/vim-syntastic/syntastic"
   },
   ["telescope.nvim"] = {
     loaded = true,
