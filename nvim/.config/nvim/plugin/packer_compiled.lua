@@ -74,15 +74,15 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["42header-vim.git"] = {
+  ["42-header.vim.git"] = {
     loaded = true,
-    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/42header-vim.git",
-    url = "https://github.com/arthurnunesc/42header-vim"
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/42-header.vim.git",
+    url = "https://github.com/arthurnunesc/42-header.vim"
   },
-  ["42norminette-vim.git"] = {
+  ["42-norminette.vim.git"] = {
     loaded = true,
-    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/42norminette-vim.git",
-    url = "https://github.com/arthurnunesc/42norminette-vim"
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/42-norminette.vim.git",
+    url = "https://github.com/arthurnunesc/42-norminette.vim"
   },
   black = {
     loaded = true,
@@ -138,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-shellcheck"] = {
+    loaded = true,
+    path = "/home/arthurnunesc/.local/share/nvim/site/pack/packer/start/vim-shellcheck",
+    url = "https://github.com/itspriddle/vim-shellcheck"
   }
 }
 

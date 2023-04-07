@@ -32,4 +32,8 @@ return require('packer').startup(function(use)
   -- Python stuff
   vim.cmd[[let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python']]  
   use { 'psf/black' }
+
+  -- Shell script stuff
+  use { 'https://github.com/itspriddle/vim-shellcheck' }
 end) 
+
