@@ -51,7 +51,6 @@ elif [ $machine = "Mac" ]; then
     alias vim="nvim"
     alias vi="nvim"
 fi
-
 # Prompt
 PS1="arthur: %1~ %# "
 
