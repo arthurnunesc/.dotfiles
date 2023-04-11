@@ -51,6 +51,7 @@ elif [ $machine = "Mac" ]; then
     alias vim="nvim"
     alias vi="nvim"
 fi
+
 # Prompt
 PS1="arthur: %1~ %# "
 
@@ -63,9 +64,8 @@ if [ -d "$HOME/.cargo/bin" ]; then
 fi
 
 # Plugins
-if [ -f "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-else
+if [ ! -f "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting
-    source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
