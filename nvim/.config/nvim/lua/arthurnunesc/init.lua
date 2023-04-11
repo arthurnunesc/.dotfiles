@@ -1,2 +1,3 @@
 require("arthurnunesc.remap")
-require("arthurnunesc.packer")
+require("arthurnunesc.lazy")
+

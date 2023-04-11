@@ -1,10 +1,9 @@
 require("arthurnunesc")
 
-vim.cmd[[
-  set tabstop=2
-  set shiftwidth=0
-  set expandtab
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 0
+vim.opt.expandtab = true
 
-  syntax on
-  set number relativenumber
-]]
+vim.cmd('syntax on')
+vim.opt.number = true
+vim.opt.relativenumber = true

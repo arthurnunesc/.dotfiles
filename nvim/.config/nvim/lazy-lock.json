@@ -1,0 +1,17 @@
+{
+  "42-header.vim": { "branch": "master", "commit": "71e6a4df6d72ae87a080282bf45bb993da6146b2" },
+  "42-norminette.vim": { "branch": "master", "commit": "1a06bc1b4d44ae5b0b1956324071c05828f92583" },
+  "black": { "branch": "main", "commit": "a552f7096a9f6e016c9bb1df1e0a77a17caeec1c" },
+  "copilot.vim": { "branch": "release", "commit": "b6e5624351ba735e25eb8864d7d22819aad00606" },
+  "eva01": { "branch": "main", "commit": "9f12756eff821d021c75ba8896d55b37d65a6b06" },
+  "harpoon": { "branch": "master", "commit": "f7040fd0c44e7a4010369136547de5604b9c22a1" },
+  "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
+  "nvim-lspconfig": { "branch": "master", "commit": "10fa01d553ce10646350461ac5ddc71f189e9d1a" },
+  "nvim-treesitter": { "branch": "master", "commit": "cc360a9beb1b30d172438f640e2c3450358c4086" },
+  "packer.nvim": { "branch": "master", "commit": "1d0cf98a561f7fd654c970c49f917d74fafe1530" },
+  "playground": { "branch": "master", "commit": "934cb4c4adc2e7f4f351846a63c9532018c996ed" },
+  "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
+  "syntastic": { "branch": "master", "commit": "8d5e37c29cf5952fbf300b9230bffe424c61a488" },
+  "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
+  "vim-shellcheck": { "branch": "master", "commit": "4346419ac57ef341a15aa39c827c0848f17c6faf" }
+}
