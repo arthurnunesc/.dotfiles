@@ -3,5 +3,5 @@ augroup black_on_save
   autocmd BufWritePre *.sh ShellCheck
 augroup end
 
-nnoremap <c-g> :ShellCheck<CR>
+nnoremap <C-g> :ShellCheck<CR>
 

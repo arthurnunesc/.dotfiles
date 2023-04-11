@@ -3,4 +3,4 @@ augroup black_on_save
   autocmd BufWritePre *.py Black
 augroup end
 
-nnoremap <c-q> :Black<CR>
+nnoremap <C-q> :Black<CR>

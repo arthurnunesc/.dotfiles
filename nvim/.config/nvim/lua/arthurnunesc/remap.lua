@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>fm", vim.cmd.Ex)
 
 vim.cmd[[
-  vnoremap <C-c> "*y :let @+=@*<CR>
-  map <C-v> "+P
+  vnoremap <C-S-c> "*y :let @+=@*<CR>
+  map <C-S-v> "+P
   map <C-a> ggVG
 ]]
