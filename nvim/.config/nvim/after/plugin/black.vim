@@ -1,6 +1,6 @@
 augroup black_on_save
   autocmd!
-  autocmd BufWritePre *.py Black
+  autocmd BufWritePre *.py  Black
 augroup end
 
-nnoremap <C-q> :Black<CR>
+nnoremap <F9> :Black<CR>

@@ -12,25 +12,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  "wbthomason/packer.nvim",
-  -- Custom LSP support
-  "neovim/nvim-lspconfig",
   -- Theming
-  { "hachy/eva01.vim" , name = "eva01" },
-  -- GitHub Copilot
-  "github/copilot.vim",
-
+  { "https://github.com/aonemd/quietlight.vim.git" , name = "quietlight" },
+  { "neovim/nvim-lspconfig" },
   {"nvim-telescope/telescope.nvim", version = "0.1.1", dependencies = "nvim-lua/plenary.nvim"},
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "nvim-treesitter/playground", build = ":TSInstall query" },
-  "ThePrimeagen/harpoon",
+  { "github/copilot.vim" },
+  -- Navigation
+  { "ThePrimeagen/harpoon" },
   -- 42 stuff
-  "https://github.com/arthurnunesc/42-header.vim.git",
+  { "https://github.com/arthurnunesc/42-header.vim.git" },
   { "https://github.com/arthurnunesc/42-norminette.vim.git", dependencies = "vim-syntastic/syntastic" },
   -- Python stuff
-  "psf/black",
+  { "psf/black" },
   -- Shell script stuff
-  "https://github.com/itspriddle/vim-shellcheck",
+  { "https://github.com/itspriddle/vim-shellcheck" },
 }
 
 -- Defining black venv location

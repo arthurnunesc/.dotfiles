@@ -1,5 +1,8 @@
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
+local statusmark, mark = pcall(require, "harpoon.mark")
+local statusui, ui = pcall(require, "harpoon.ui")
+if not statusmark or not statusui then
+  return
+end
 
 vim.keymap.set("n", "<leader>a", mark.add_file)
 vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
