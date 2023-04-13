@@ -13,14 +13,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Checks which OS we are in and sets the machine variable accordingly
-uname_out="$(uname -s)"
-case "${uname_out}" in
-Linux*) machine=Linux ;;
-Darwin*) machine=Mac ;;
-*) machine="OTHER:${uname_out}" ;;
-esac
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -41,16 +33,17 @@ alias ccw="gcc -Wall -Wextra -Werror"
 alias normr="norminette -R CheckForbiddenSourceHeader"
 
 # My aliases
-if [ $machine = "Linux" ]; then
-    alias ls="ls --color=auto"
+if [ $machine = "linux" ]; then
     alias nvim="nvim.appimage"
     alias vim="nvim.appimage"
     alias vi="nvim.appimage"
-elif [ $machine = "Mac" ]; then
+elif [ $machine = "mac" ]; then
     alias nvim="nvim"
     alias vim="nvim"
     alias vi="nvim"
 fi
+
+alias conda42="conda activate 42AI-$USER"
 
 # Prompt
 PS1="arthur: %1~ %# "
@@ -63,9 +56,6 @@ if [ -d "$HOME/.cargo/bin" ]; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-# Plugins
-if [ ! -f "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting
-fi
-
 source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$HOME"/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fpath=("$HOME"/.config/zsh/plugins/zsh-completions/src $fpath)
