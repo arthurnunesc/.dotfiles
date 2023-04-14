@@ -13,6 +13,14 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Checks which OS we are in and sets the machine variable accordingly
+uname_out="$(uname -s)"
+case "${uname_out}" in
+Linux*) machine=linux ;;
+Darwin*) machine=mac ;;
+*) machine="OTHER:${uname_out}" ;;
+esac
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
