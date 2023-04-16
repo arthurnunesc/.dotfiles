@@ -1,9 +1,7 @@
 function SetTheme()
   vim.cmd[[
     set termguicolors
-
-    set background=light
-    colorscheme quietlight
+    colorscheme rose-pine
   ]]
 end
 
