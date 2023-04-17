@@ -1,13 +1,15 @@
+alias go='cd /sgoinfre/Perso/anunes-c'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/arthurnunesc/.local/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/anunes-c/.local/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/arthurnunesc/.local/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/arthurnunesc/.local/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/anunes-c/.local/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/anunes-c/.local/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/arthurnunesc/.local/miniconda3/bin:$PATH"
+        export PATH="/Users/anunes-c/.local/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -30,7 +32,7 @@ bindkey -e
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/arthurnunesc/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -39,6 +41,7 @@ compinit
 # 42 stuff
 alias ccw="gcc -Wall -Wextra -Werror"
 alias normr="norminette -R CheckForbiddenSourceHeader"
+alias conda42="conda activate 42AI-$USER"
 
 # My aliases
 if [ $machine = "linux" ]; then
@@ -50,8 +53,6 @@ elif [ $machine = "mac" ]; then
     alias vim="nvim"
     alias vi="nvim"
 fi
-
-alias conda42="conda activate 42AI-$USER"
 
 # Prompt
 PS1="arthur: %1~ %# "

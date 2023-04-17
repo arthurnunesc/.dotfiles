@@ -17,6 +17,7 @@ local plugins = {
   { 'rose-pine/neovim', name = 'rose-pine' },
   { "catppuccin/nvim", name = "catppuccin" },
   { "neovim/nvim-lspconfig" },
+  { "williamboman/mason.nvim", build = ":MasonUpdate" },
   {"nvim-telescope/telescope.nvim", version = "0.1.1", dependencies = "nvim-lua/plenary.nvim"},
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "nvim-treesitter/playground", build = ":TSInstall query" },
