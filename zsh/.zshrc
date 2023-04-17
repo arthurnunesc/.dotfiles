@@ -1,5 +1,3 @@
-alias go='cd /sgoinfre/Perso/anunes-c'
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/anunes-c/.local/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -48,25 +46,24 @@ if [ $machine = "linux" ]; then
     alias nvim="nvim.appimage"
     alias vim="nvim.appimage"
     alias vi="nvim.appimage"
+    if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+    fi
+    if [ -d "$HOME/.cargo/bin" ]; then
+        PATH="$HOME/.cargo/bin:$PATH"
+    fi
 elif [ $machine = "mac" ]; then
+    alias go='cd /sgoinfre/Perso/anunes-c'
     alias nvim="nvim"
     alias vim="nvim"
     alias vi="nvim"
+    go
 fi
 
 # Prompt
 PS1="arthur: %1~ %# "
 
 # Set PATH so it includes user's private bin and cargo bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-if [ -d "$HOME/.cargo/bin" ]; then
-    PATH="$HOME/.cargo/bin:$PATH"
-fi
-
 source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$HOME"/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=("$HOME"/.config/zsh/plugins/zsh-completions/src $fpath)
-
-go
