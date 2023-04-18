@@ -43,26 +43,30 @@ alias conda42="conda activate 42AI-$USER"
 
 # My aliases
 if [ $machine = "linux" ]; then
+    if [ -d "$HOME/.local/bin" ]; then
+      PATH="$HOME/.local/bin:$PATH"
+    fi
+    if [ -d "$HOME/.cargo/bin" ]; then
+      PATH="$HOME/.cargo/bin:$PATH"
+    fi
     alias nvim="nvim.appimage"
     alias vim="nvim.appimage"
     alias vi="nvim.appimage"
+    alias v="nvim.appimage"
 elif [ $machine = "mac" ]; then
-    alias go='cd /sgoinfre/Perso/anunes-c'
+    if [ -d "/sgoinfre/Perso/$USER/.local/bin" ]; then
+      PATH="/sgoinfre/Perso/$USER/.local/bin:$PATH"
+    fi
+    alias go='cd /sgoinfre/Perso/$USER'
     alias nvim="nvim"
     alias vim="nvim"
     alias vi="nvim"
-    cd /sgoinfre/Perso/anunes-c
-fi
-
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-    fi
-if [ -d "$HOME/.cargo/bin" ]; then
-    PATH="$HOME/.cargo/bin:$PATH"
+    alias v="nvim"
+    cd /sgoinfre/Perso/$USER
 fi
 
 # Prompt
-PS1="arthur: %1~ %# "
+PS1="$USER: %1~ %# "
 
 source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$HOME"/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
