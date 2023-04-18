@@ -51,7 +51,7 @@ elif [ $machine = "mac" ]; then
     alias nvim="nvim"
     alias vim="nvim"
     alias vi="nvim"
-    go
+    cd /sgoinfre/Perso/anunes-c
 fi
 
 if [ -d "$HOME/.local/bin" ]; then
@@ -64,7 +64,6 @@ fi
 # Prompt
 PS1="arthur: %1~ %# "
 
-# Set PATH so it includes user's private bin and cargo bin if it exists
 source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$HOME"/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=("$HOME"/.config/zsh/plugins/zsh-completions/src $fpath)
