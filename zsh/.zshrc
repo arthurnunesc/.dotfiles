@@ -46,18 +46,19 @@ if [ $machine = "linux" ]; then
     alias nvim="nvim.appimage"
     alias vim="nvim.appimage"
     alias vi="nvim.appimage"
-    if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-    fi
-    if [ -d "$HOME/.cargo/bin" ]; then
-        PATH="$HOME/.cargo/bin:$PATH"
-    fi
 elif [ $machine = "mac" ]; then
     alias go='cd /sgoinfre/Perso/anunes-c'
     alias nvim="nvim"
     alias vim="nvim"
     alias vi="nvim"
     go
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+    fi
+if [ -d "$HOME/.cargo/bin" ]; then
+    PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # Prompt
