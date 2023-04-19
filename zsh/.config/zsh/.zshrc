@@ -26,15 +26,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt beep
-bindkey -e
-
+bindkey -v
 # End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '$HOME/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 # 42 stuff
 alias ccw="gcc -Wall -Wextra -Werror"
@@ -68,6 +61,36 @@ fi
 # Prompt
 PS1="$USER: %1~ %# "
 
-source "$HOME"/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source "$HOME"/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-fpath=("$HOME"/.config/zsh/plugins/zsh-completions/src $fpath)
+
+# Zinit
+declare -A ZINIT  # initial Zinit's hash definition, if configuring before loading Zinit, and then:
+
+if [ $machine = "linux" ]; then
+  ZINIT[HOME_DIR]="$HOME/.local/share/zinit"
+elif [ $machine = "mac" ]; then
+  ZINIT[HOME_DIR]="/sgoinfre/Perso/$USER/.local/share/zinit"
+fi
+
+### Added by Zinit's installer
+if [ ! -f ${ZINIT[HOME_DIR]}/zinit.git/zinit.zsh ]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "${ZINIT[HOME_DIR]}" && command chmod g-rwX "${ZINIT[HOME_DIR]}"
+    command git clone https://github.com/zdharma-continuum/zinit "${ZINIT[HOME_DIR]}/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "${ZINIT[HOME_DIR]}/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+### End of Zinit's installer chunk
+
+# Installing plugins
+# Plugin history-search-multi-word loaded with investigating.
+zinit load zdharma-continuum/history-search-multi-word
+
+# Two regular plugins loaded without investigating.
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma-continuum/fast-syntax-highlighting
+
