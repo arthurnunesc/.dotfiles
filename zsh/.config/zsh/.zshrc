@@ -58,6 +58,23 @@ elif [ $machine = "mac" ]; then
     cd /sgoinfre/Perso/$USER
 fi
 
+alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+
+function nvims() {
+  items=("default" "kickstart" "lazyvim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt="  select the neovim config you want  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^a "nvims\n"
+
 # Prompt
 PS1="$USER: %1~ %# "
 
