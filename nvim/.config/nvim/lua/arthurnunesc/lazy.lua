@@ -16,24 +16,20 @@ local plugins = {
   { "https://github.com/aonemd/quietlight.vim.git" , name = "quietlight" },
   { 'rose-pine/neovim', name = 'rose-pine' },
   { "catppuccin/nvim", name = "catppuccin" },
+  -- LSP/DAP stuff
   { "neovim/nvim-lspconfig" },
   { "williamboman/mason.nvim", build = ":MasonUpdate" },
-  {"nvim-telescope/telescope.nvim", version = "0.1.1", dependencies = "nvim-lua/plenary.nvim"},
+  { "williamboman/mason-lspconfig.nvim" },
+  { "mfussenegger/nvim-dap" },
+  { "jose-elias-alvarez/null-ls.nvim", dependencies = "nvim-lua/plenary.nvim" }, 
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  { "nvim-treesitter/playground", build = ":TSInstall query" },
-  { "github/copilot.vim" },
+  -- { "nvim-treesitter/playground", build = ":TSInstall query" },
   -- Navigation
-  { "ThePrimeagen/harpoon" },
+  { "nvim-telescope/telescope.nvim", version = "0.1.1", dependencies = "nvim-lua/plenary.nvim"},
+  -- Code completion/AI
+  { "github/copilot.vim" },
   -- 42 stuff
-  { "https://github.com/arthurnunesc/42-header.vim.git" },
-  { "https://github.com/arthurnunesc/42-norminette.vim.git", dependencies = "vim-syntastic/syntastic" },
-  -- Python stuff
-  { "psf/black" },
-  -- Shell script stuff
-  { "https://github.com/itspriddle/vim-shellcheck" },
+  { 'hardyrafael17/norminette42.nvim' },
 }
-
--- Defining black venv location
-vim.cmd('let g:python3_host_prog = $HOME . "/.local/venv/nvim/bin/python"')
 
 require("lazy").setup(plugins, opts) 
