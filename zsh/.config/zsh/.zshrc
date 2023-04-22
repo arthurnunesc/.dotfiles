@@ -21,13 +21,13 @@ Darwin*) machine=mac ;;
 *) machine="OTHER:${uname_out}" ;;
 esac
 
-# Lines configured by zsh-newuser-install
+### Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt beep
 bindkey -v
-# End of lines configured by zsh-newuser-install
+### End of lines configured by zsh-newuser-install
 
 # 42 stuff
 alias ccw="gcc -Wall -Wextra -Werror"
@@ -79,9 +79,8 @@ bindkey -s ^a "nvims\n"
 PS1="$USER: %1~ %# "
 
 
-# Zinit
+### ZINIT ###
 declare -A ZINIT  # initial Zinit's hash definition, if configuring before loading Zinit, and then:
-
 if [ $machine = "linux" ]; then
   ZINIT[HOME_DIR]="$HOME/.local/share/zinit"
 elif [ $machine = "mac" ]; then
@@ -100,14 +99,22 @@ fi
 source "${ZINIT[HOME_DIR]}/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-
 ### End of Zinit's installer chunk
 
-# Installing plugins
-# Plugin history-search-multi-word loaded with investigating.
+### Installing plugins
+# Plugin history-search-multi-word loaded with investigating
 zinit load zdharma-continuum/history-search-multi-word
 
-# Two regular plugins loaded without investigating.
+# Two regular plugins loaded without investigating
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
+
+# Better zsh vi mode
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
+
+
+### STARSHIP CONFIG ###
+export STARSHIP_CONFIG="$HOME"/.config/starship/starship.toml
+eval "$(starship init zsh)"
 
